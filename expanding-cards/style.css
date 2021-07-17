@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  width: 90vw;
+}
+.container .panel{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+  margin: 10vh 20px;
+  flex: 0.5;
+  height: 80vh;
+  border-radius: 40px;
+  transition: all 700ms ease;
+}
+.container .panel h3{
+  position: absolute;
+  opacity: 0;
+  color: #fff;
+  left: 20px;
+  bottom: 20px;
+}
+.container .panel.active{
+  flex: 5;
+  height: 80vh;
+}
+.container .panel.active h3{
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
